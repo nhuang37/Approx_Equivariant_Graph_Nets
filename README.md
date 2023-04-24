@@ -11,7 +11,9 @@ This repo contains codes for paper "On the Bias-Variance Tradeoff in Learning Ap
 
 ### 1. Human Pose Estimation
 
-### 2. Traffic Forecasting: See folder ```./DCRNN_Pytorch```
+### 2. Traffic Forecasting: 
+See folder ```./DCRNN_Pytorch```
+
 (a) Download the following data folders and store them to ```./DCRNN_Pytorch/data```
 - METR-LA-T3 : G drive link [here](https://drive.google.com/drive/folders/1TiGfCf_CTr2WZ0lK0C9XUDLU-GjprBRo?usp=share_link) to download and store the traffic graph signals, with using (T-3, T-2, T-1) graph signals to predict (T, T+1, T+2) graph signals. Data credit to SOURCE
 - sensor_graph : G drive link [here](https://drive.google.com/drive/folders/139d3quRQkC08zoxVID7AIWPcfr74_KK7?usp=sharing) to download and store the graph adjacency files
