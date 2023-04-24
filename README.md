@@ -25,6 +25,11 @@ python dcrnn_train_pytorch.py --config_filename=data/model/dcrnn_la_aut_gc_false
 
 #### File directory:
 
+  ```./DCRNN_PyTorch```
+  - ```orbit_idx.p``` : store the 2-cluster assignments 
+  - ```orbit_idx_9.p```: store the 9-cluster assignment
+  - ```dcrnn_train_pytorch.py``` : main file to run the experiment
+
   ```./DCRNN_Pytorch/data/model```
   - ```dcrnn_la_aut_gc_false_t3.yaml``` : config file to run experiments on the original traffic graph
   - ```dcrnn_la_sp_aut_gc_false_t3.yaml``` : config file to run experiments on the sparsified traffic graph
@@ -34,10 +39,6 @@ python dcrnn_train_pytorch.py --config_filename=data/model/dcrnn_la_aut_gc_false
   - ```dcrnn_model.py``` : DCRNN spatial-temporal GNN script
   - ```dcrnn_cell.py``` : modified basic graph convolution block to allow (approximate) **aut(G) equivariance**
 
-  ```./DCRNN_PyTorch```
-  - ```orbit_idx.p``` : store the 2-cluster assignments 
-  - ```orbit_idx_9.p```: store the 9-cluster assignment
-  - ```dcrnn_train_pytorch.py``` : main file to run the experiment
 
 ### 3. Simulations
 - Fig 1.: Symmetry model selection example for $f: \mathbb R^3 \to \mathbb R$, where $f$ can be non-invariant, $S_2$-invaraint, or $S_3$-invariant. See ```project_subgroup.ipynb```
