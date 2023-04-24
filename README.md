@@ -5,7 +5,6 @@ This repo contains codes for paper "On the Bias-Variance Tradeoff in Learning Ap
 ## Dependencies
 - Python 3.7+
 - Pytorch 1.10+
-- [pytorch-geometric](https://pytorch-geometric.readthedocs.io/en/latest/notes/installation.html)
 
 ## Experiments
 
