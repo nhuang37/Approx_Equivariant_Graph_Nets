@@ -8,6 +8,11 @@ This repo contains codes for paper "Approximately Equivariant Graph Networks"
 
 ## Experiments
 
+
+
+### 0. Simulations
+- Fig 1.: Symmetry model selection example for $f: \mathbb R^3 \to \mathbb R$, where $f$ can be non-invariant, $S_2$-invaraint, or $S_3$-invariant. See ```project_subgroup.ipynb```
+
 ### 1. Image Inpainting
 See folder ```./Image_inpainting```
 - Figure 6 (left): Bias-Variance tradeoff via graph coarsening
@@ -16,7 +21,6 @@ See folder ```./Image_inpainting```
 - Figure 6 (right): Ablation of coarsened graph symmetry
   - To reproduce the results, see notebook ```FASHION+hflip_inpainting_reflection.ipynb```
   
-
 ### 2. Human Pose Estimation
 
 TODO
@@ -51,6 +55,3 @@ python dcrnn_train_pytorch.py --config_filename=data/model/dcrnn_la_aut_gc_false
   - ```dcrnn_model.py``` : DCRNN spatial-temporal GNN script
   - ```dcrnn_cell.py``` : modified basic graph convolution block to allow (approximate) **aut(G) equivariance**
 
-
-### 3. Simulations
-- Fig 1.: Symmetry model selection example for $f: \mathbb R^3 \to \mathbb R$, where $f$ can be non-invariant, $S_2$-invaraint, or $S_3$-invariant. See ```project_subgroup.ipynb```
