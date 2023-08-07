@@ -1,6 +1,6 @@
-# Bias-Variance Tradeoff in Learning Approximately Equivariant Graph Networks
+# Approximately Equivariant Graph Networks
 
-This repo contains codes for paper "On the Bias-Variance Tradeoff in Learning Approximately Equivariant Graph Networks"
+This repo contains codes for paper "Approximately Equivariant Graph Networks"
 
 ## Dependencies
 - Python 3.7+
@@ -8,9 +8,20 @@ This repo contains codes for paper "On the Bias-Variance Tradeoff in Learning Ap
 
 ## Experiments
 
-### 1. Human Pose Estimation
+### 1. Image Inpainting
+See folder ```./Image_inpainting```
+- Figure 6 (left): Bias-Variance tradeoff via graph coarsening
+  - To reproduce the results, see notebook ```graph_coarsen_runs.ipynb```
+  - The linear model baselines are implemented in notebook ```graph_coarsen_runs_linear.ipynb```
+- Figure 6 (right): Ablation of coarsened graph symmetry
+  - To reproduce the results, see notebook ```FASHION+hflip_inpainting_reflection.ipynb```
+  
 
-### 2. Traffic Forecasting: 
+### 2. Human Pose Estimation
+
+TODO
+
+### 3. Traffic Forecasting: 
 See folder ```./DCRNN_Pytorch```
 
 (a) Download the following data folders and store them to ```./DCRNN_Pytorch/data```
