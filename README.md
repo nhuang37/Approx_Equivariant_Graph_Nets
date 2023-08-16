@@ -20,12 +20,8 @@ See folder ```./Image_inpainting```
   - The linear model baselines are implemented in notebook ```graph_coarsen_runs_linear.ipynb```
 - Figure 6 (right): Ablation of coarsened graph symmetry
   - To reproduce the results, see notebook ```FASHION+hflip_inpainting_reflection.ipynb```
-  
-### 2. Human Pose Estimation
 
-TODO
-
-### 3. Traffic Forecasting: 
+### 2. Traffic Forecasting: 
 See folder ```./DCRNN_Pytorch```
 
 (a) Download the following data folders and store them to ```./DCRNN_Pytorch/data```
@@ -55,3 +51,7 @@ python dcrnn_train_pytorch.py --config_filename=data/model/dcrnn_la_aut_gc_false
   - ```dcrnn_model.py``` : DCRNN spatial-temporal GNN script
   - ```dcrnn_cell.py``` : modified basic graph convolution block to allow (approximate) **aut(G) equivariance**
 
+  
+### 3. Human Pose Estimation
+
+In progress
