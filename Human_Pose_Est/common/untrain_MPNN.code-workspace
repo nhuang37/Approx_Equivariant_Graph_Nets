@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"path": "../../Untrain_GNN/untrain_MPNN"
+		},
+		{
+			"path": ".."
+		}
+	],
+	"settings": {}
+}
