@@ -59,12 +59,12 @@ The model architecture and data are adapted from: https://github.com/garyzhao/Se
 (a) Download data following instructions [here](https://github.com/garyzhao/SemGCN/blob/master/data/README.md)
 
 (b) Run models with different symmetry choices, using $\mathcal{G}$-Net(gc+ew) with graph convolution and learnable edge weights (c.f. Table 4):
-  - $\mathcal{S}_{16}$ (Default SemGCN setup): ```python3 main_gcn.py --epochs 30 --hid_dim 128  --checkpoint "./checkpoints"```
-  - Relax-$\mathcal{S}_{16}$: ```python3 main_gcn.py --no_tie --epochs 30 --hid_dim 128  --checkpoint "./checkpoints"```
+  - $\mathcal{S}_{16}$ (Default SemGCN setup): ```python3 main_gcn_aut.py --epochs 30 --hid_dim 128  --checkpoint "./checkpoints"```
+  - Relax-$\mathcal{S}_{16}$: ```python3 main_gcn_aut.py --no_tie --epochs 30 --hid_dim 128  --checkpoint "./checkpoints"```
   - $\mathcal{S}_2^2$ (aut(G)): ```python3 main_gcn_aut.py --aut --epochs 30 --hid_dim 128  --checkpoint "./checkpoints"```
   - Trivial: ```python3 main_gcn_aut.py --triv --epochs 30 --hid_dim 128  --checkpoint "./checkpoints"```
 
 (c) Run different model variants (c.f. Table 5):
-  - Vanilla $\mathcal{G}$-Net: ```python3 main_gcn.py --no_gc --no_ew  --epochs 30 --hid_dim 128  --checkpoint "./checkpoints"```
-  - $\mathcal{G}$-Net(gc): ```python3 main_gcn.py --no_ew  --epochs 30 --hid_dim 128  --checkpoint "./checkpoints"```
-  - $\mathcal{G}$-Net(pt): ```python3 main_gcn.py --no_gc  --no_ew --pointwise --epochs 30 --hid_dim 128  --checkpoint "./checkpoints"```
+  - Vanilla $\mathcal{G}$-Net: ```python3 main_gcn_aut.py --no_gc --no_ew  --epochs 30 --hid_dim 128  --checkpoint "./checkpoints"```
+  - $\mathcal{G}$-Net(gc): ```python3 main_gcn_aut.py --no_ew  --epochs 30 --hid_dim 128  --checkpoint "./checkpoints"```
+  - $\mathcal{G}$-Net(pt): ```python3 main_gcn_aut.py --no_gc  --no_ew --pointwise --epochs 30 --hid_dim 128  --checkpoint "./checkpoints"```
