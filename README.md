@@ -54,6 +54,7 @@ python dcrnn_train_pytorch.py --config_filename=data/model/dcrnn_la_aut_gc_false
 
   
 ### 3. Human Pose Estimation
+See folder ```./Human_Pose_Est```
 The model architecture and data are adapted from: https://github.com/garyzhao/SemGCN
 
 (a) Download data following instructions [here](https://github.com/garyzhao/SemGCN/blob/master/data/README.md)
