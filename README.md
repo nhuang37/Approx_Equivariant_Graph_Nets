@@ -14,7 +14,7 @@ This repo contains codes for paper "Approximately Equivariant Graph Networks" (h
 - Fig 1.: Symmetry model selection example for $f: \mathbb R^3 \to \mathbb R$, where $f$ can be non-invariant, $S_2$-invaraint, or $S_3$-invariant. See ```project_subgroup.ipynb```
 
 ### 1. Image Inpainting
-See folder ```./Image_inpainting```
+See folder ```./image_inpainting```
 - Figure 6 (left): Bias-Variance tradeoff via graph coarsening
   - To reproduce the results, see notebook ```graph_coarsen_runs.ipynb```
   - The linear model baselines are implemented in notebook ```graph_coarsen_runs_linear.ipynb```
