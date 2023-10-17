@@ -1,6 +1,6 @@
 # Approximately Equivariant Graph Networks
 
-This repo contains codes for paper "Approximately Equivariant Graph Networks"
+This repo contains codes for paper "Approximately Equivariant Graph Networks" (https://arxiv.org/abs/2308.10436)
 
 ## Dependencies
 - Python 3.7+
@@ -23,12 +23,13 @@ See folder ```./Image_inpainting```
 
 ### 2. Traffic Forecasting: 
 See folder ```./DCRNN_Pytorch```
+The model architecture and data are adapated from: https://github.com/chnsh/DCRNN_PyTorch
 
 (a) Download the following data folders and store them to ```./DCRNN_Pytorch/data```
 - METR-LA-T3 : G drive link [here](https://drive.google.com/drive/folders/1TiGfCf_CTr2WZ0lK0C9XUDLU-GjprBRo?usp=share_link) to download and store the traffic graph signals, with using (T-3, T-2, T-1) graph signals to predict (T, T+1, T+2) graph signals. Data credit to SOURCE
 - sensor_graph : G drive link [here](https://drive.google.com/drive/folders/139d3quRQkC08zoxVID7AIWPcfr74_KK7?usp=sharing) to download and store the graph adjacency files
 
-(b) Run **aut(G)**-equivariant DCRNN with the default set-up: 
+(b) Run **aut(G)**-equivariant DCRNN with the default set-up (c.f. Table 3): 
 ```
 python dcrnn_train_pytorch.py --config_filename=data/model/dcrnn_la_aut_gc_false_t3.yaml --aut True
 ```
@@ -53,5 +54,17 @@ python dcrnn_train_pytorch.py --config_filename=data/model/dcrnn_la_aut_gc_false
 
   
 ### 3. Human Pose Estimation
+The model architecture and data are adapted from: https://github.com/garyzhao/SemGCN
 
-In progress
+(a) Download data following instructions [here](https://github.com/garyzhao/SemGCN/blob/master/data/README.md)
+
+(b) Run models with different symmetry choices, using $\mathcal{G}$-Net(gc+ew) with graph convolution and learnable edge weights (c.f. Table 4):
+  - $\mathcal{S}_{16}$ (Default SemGCN setup): ```python3 main_gcn.py --epochs 30 --hid_dim 128  --checkpoint "./checkpoints"```
+  - Relax-$\mathcal{S}_{16}$: ```python3 main_gcn.py --no_tie --epochs 30 --hid_dim 128  --checkpoint "./checkpoints"```
+  - $\mathcal{S}_2^2$ (aut(G)): ```python3 main_gcn_aut.py --aut --epochs 30 --hid_dim 128  --checkpoint "./checkpoints"```
+  - Trivial: ```python3 main_gcn_aut.py --triv --epochs 30 --hid_dim 128  --checkpoint "./checkpoints"```
+
+(c) Run different model variants (c.f. Table 5):
+  - Vanilla $\mathcal{G}$-Net: ```python3 main_gcn.py --no_gc --no_ew  --epochs 30 --hid_dim 128  --checkpoint "./checkpoints"```
+  - $\mathcal{G}$-Net(gc): ```python3 main_gcn.py --no_ew  --epochs 30 --hid_dim 128  --checkpoint "./checkpoints"```
+  - $\mathcal{G}$-Net(pt): ```python3 main_gcn.py --no_gc  --no_ew --pointwise --epochs 30 --hid_dim 128  --checkpoint "./checkpoints"```
